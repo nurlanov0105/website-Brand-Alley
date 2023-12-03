@@ -1,0 +1,41 @@
+.user-orders {
+   flex-grow: 1;
+   padding: 4rem 4rem 5.5rem;
+   &__title {
+      display: inline-block;
+      margin-bottom: 4rem;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: #1a2030;
+      position: relative;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 28px;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      .order-box {
+         &:nth-child(2) {
+            display: none;
+         }
+      }
+      &__content {
+         row-gap: 32px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding: 32px 16px 46px;
+
+      &__title {
+         margin-bottom: 32px;
+      }
+   }
+}

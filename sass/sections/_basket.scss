@@ -1,0 +1,147 @@
+.basket {
+   padding: 48px 0 9.5rem;
+   background-color: $ghost-white;
+   &__title {
+      margin-bottom: 6rem;
+      &::before {
+         content: unset;
+      }
+   }
+
+   &__wrapper {
+   }
+
+   &__form {
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 17.5rem;
+      padding: 4rem 3.1rem 7.2rem 4rem;
+      margin-bottom: 48px;
+
+      border-radius: 30px;
+      background-color: $main-white;
+   }
+
+   &__row {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+   }
+
+   &__bottom {
+      display: flex;
+      column-gap: 18.3rem;
+      .input-dark {
+         &__title {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.25;
+            letter-spacing: 0.2px;
+         }
+
+         &__box {
+         }
+
+         &__input {
+            border: 1px solid #8b8b8b;
+            &::placeholder {
+               font-family: "Inter";
+               font-size: 16px;
+               font-weight: 400;
+               letter-spacing: 0.2px;
+               color: #8b8b8b;
+            }
+         }
+      }
+   }
+
+   &__promo {
+      max-width: 370px;
+      flex-grow: 1;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      flex-grow: 1;
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: 0.2px;
+      color: $black-color;
+   }
+
+   &__item-total {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.1px;
+   }
+
+   &__form-bottom {
+      display: flex;
+      flex-direction: column;
+      row-gap: 11px;
+      max-width: 576px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   &__btn {
+      width: 100%;
+      height: 55px;
+
+      span {
+         font-size: 24px;
+         font-weight: 500;
+      }
+   }
+
+   &__form-descr {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.66;
+      letter-spacing: 0.2px;
+      color: #bcbcbc;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      padding: 40px 0 52px;
+      &__content {
+         row-gap: 52px;
+         padding: 36px 16px 34px;
+         margin-bottom: 40px;
+      }
+      &__card {
+         &:not(:nth-child(1)) {
+            display: none;
+         }
+      }
+
+      &__bottom {
+         flex-direction: column;
+         row-gap: 40px;
+      }
+
+      &__promo {
+         max-width: 100%;
+      }
+
+      &__form-bottom {
+         row-gap: 24px;
+      }
+   }
+}

@@ -1,0 +1,39 @@
+.receipts {
+   &__row {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      row-gap: 12px;
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      padding: 10px 13px;
+      border-radius: 6px;
+      background-color: $ghost-white;
+      flex-shrink: 0;
+
+      font-size: 14px;
+      font-weight: 300;
+      color: $black-color;
+
+      cursor: pointer;
+      @include transition;
+
+      &.active {
+         background-color: $accent-color;
+         color: $main-white;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__row {
+         column-gap: 12px;
+      }
+
+      &.margin-bottom {
+         margin-bottom: 40px;
+      }
+   }
+}

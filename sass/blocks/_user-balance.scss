@@ -1,0 +1,200 @@
+.user-balance {
+   padding: 3.6rem 2.8rem 7rem;
+   &__top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+   }
+
+   &__top-row {
+      display: flex;
+      align-items: center;
+      column-gap: 60px;
+      margin-right: 33px;
+   }
+
+   &__title {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.175px;
+   }
+
+   &__top-btn {
+      height: 44px;
+      max-width: 126px;
+
+      span {
+         font-size: 14px;
+         font-weight: 300;
+      }
+   }
+   &__btns {
+      margin-bottom: 40px;
+
+      .user-balance__top-btn {
+         display: none;
+      }
+   }
+
+   &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      padding: 0 27px;
+      height: 44px;
+
+      border-radius: 6px;
+      background-color: $ghost-white;
+
+      span {
+         font-size: 14px;
+         font-weight: 300;
+      }
+
+      @include transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+         background-color: $accent-color;
+
+         span {
+            color: $main-white;
+         }
+      }
+   }
+
+   &__history {
+      display: flex;
+      column-gap: 12rem;
+      flex-wrap: wrap;
+      row-gap: 32px;
+   }
+
+   &__box {
+      display: flex;
+      column-gap: 32px;
+   }
+
+   &__col {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+   }
+
+   &__name {
+      font-size: 14px;
+      font-weight: 300;
+      color: #bcbcbc;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+   }
+
+   &__item {
+      font-size: 14px;
+      font-weight: 300;
+      color: $black-color;
+
+      &.accent-color {
+         color: $accent-color;
+      }
+   }
+
+   &__history--mob {
+      display: none;
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1199px) {
+      &__history {
+         column-gap: 0;
+         justify-content: space-between;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__top {
+         margin-bottom: 16px;
+      }
+      &__top-row {
+         margin-right: 0;
+         column-gap: 0;
+         justify-content: space-between;
+         flex-grow: 1;
+      }
+      &__btns {
+         display: flex;
+         column-gap: 24px;
+         margin-bottom: 50px;
+
+         .user-balance__top-btn {
+            display: inline-flex;
+         }
+      }
+
+      &__top-btn--desc {
+         display: none;
+      }
+      &__history--desc {
+         display: none;
+      }
+      &__history--mob {
+         display: flex;
+         flex-direction: column;
+         row-gap: 16px;
+
+         & + & {
+            margin-top: 32px;
+         }
+      }
+
+      &__box--reverse {
+         flex-direction: row-reverse;
+         justify-content: start;
+         column-gap: 134px;
+      }
+
+      &__box--row {
+         flex-direction: row;
+         column-gap: 83px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding: 32px 16px 46px;
+      &__title {
+         font-size: 24px;
+         font-weight: 500;
+      }
+      &__box--reverse {
+         column-gap: 20px;
+         justify-content: space-between;
+      }
+
+      &__box--row {
+         justify-content: space-between;
+         column-gap: 20px;
+      }
+   }
+
+   /* Mobile XS */
+   @media (max-width: 370px) {
+      &__btns {
+         width: 100%;
+         flex-direction: column;
+         row-gap: 16px;
+
+         * {
+            width: 100%;
+            max-width: 100%;
+         }
+      }
+   }
+}

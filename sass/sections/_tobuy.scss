@@ -1,0 +1,148 @@
+.tobuy {
+   &__title {
+      margin-bottom: 60px;
+   }
+
+   &__grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr 44.8rem;
+      grid-template-rows: 40rem 29.9rem;
+      grid-template-areas:
+         "wide wide long"
+         "short1 short2 long";
+   }
+
+   &__grid-item {
+      display: inline-block;
+      background-color: $accent-color;
+      border-radius: 30px;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+         url(<path-to-image>), lightgray 50% / cover no-repeat;
+
+      position: relative;
+
+      &--wide {
+         grid-area: wide;
+      }
+      &--short1 {
+         grid-area: short1;
+      }
+      &--short2 {
+         grid-area: short2;
+      }
+      &--long {
+         grid-area: long;
+      }
+      overflow: hidden;
+      img {
+         transition: transform 0.4s ease-in-out;
+         width: 100%;
+         height: 100%;
+      }
+
+      &:hover {
+         img {
+            transform: scale(1.1);
+         }
+      }
+   }
+
+   &__grid-title {
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+
+      font-size: 4.8rem;
+      font-weight: 900;
+      color: $main-white;
+
+      &--big {
+         left: 28px;
+         font-size: 9.6rem;
+      }
+      &--long {
+         left: 28px;
+         font-size: 9.6rem;
+      }
+
+      &--mob {
+         display: none;
+      }
+
+      /* Tablet Big */
+      @media (max-width: 1219px) {
+         font-size: 4.2rem;
+
+         &--big {
+            font-size: 7rem;
+         }
+         &--long {
+            font-size: 7rem;
+         }
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__title {
+         margin-bottom: 50px;
+      }
+      &__grid {
+         gap: 8px;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 200px 200px 200px;
+         grid-template-areas:
+            "wide wide"
+            "short2 long"
+            "short1 long";
+      }
+
+      &__grid-title {
+         left: 10px;
+         bottom: 16px;
+         &--big {
+            left: 10px;
+            bottom: 16px;
+            font-size: 6rem;
+         }
+
+         &--long {
+            bottom: unset;
+            top: 16px;
+            left: 10px;
+            font-size: 6rem;
+         }
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__title {
+         margin-bottom: 24px;
+      }
+      &__grid {
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 176px 176px 176px;
+      }
+
+      &__grid-item {
+         border-radius: 20px;
+      }
+
+      &__grid-title {
+         font-size: 20px;
+         font-weight: 700;
+         letter-spacing: -0.175px;
+         &--big,
+         &--long {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.175px;
+         }
+         &--mob {
+            display: inline;
+         }
+      }
+   }
+}

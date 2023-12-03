@@ -1,0 +1,230 @@
+.accordeon {
+   &__top {
+      margin-bottom: 64px;
+   }
+
+   &--mb {
+      margin-bottom: 26px;
+   }
+
+   .h2--mb {
+      display: none;
+   }
+
+   &__subtitle {
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 200;
+      line-height: 0.93;
+      letter-spacing: 0.16px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+   }
+
+   &__item {
+      border-radius: 10px;
+      background-color: #fafafa;
+   }
+
+   &__row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 17px 17px 32px;
+
+      border-radius: 10px;
+      background-color: $ghost-white;
+      cursor: pointer;
+   }
+
+   &__sublist {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: -9999999px;
+   }
+
+   &__item-title {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 0.2px;
+   }
+
+   &__btn {
+      width: 35px;
+      height: 35px;
+      border: 3px solid $accent-color;
+      border-radius: 10px;
+      position: relative;
+
+      span {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+
+         width: 15px;
+         height: 3px;
+         background-color: $accent-color;
+         border-radius: 3px;
+
+         &:nth-child(1) {
+            transform: translate(-50%, -50%) rotate(90deg);
+         }
+
+         @include transition;
+      }
+   }
+
+   &__item {
+      &.active {
+         .accordeon__sublist {
+            position: relative;
+            top: unset;
+            left: unset;
+            width: unset;
+            height: unset;
+            opacity: 1;
+            padding: 28px 21px 51px 32px;
+
+            font-size: 14px;
+            font-weight: 300;
+
+            p + p {
+               margin-top: 20px;
+            }
+            transition: opacity 0.2s ease-in;
+         }
+
+         .accordeon__btn {
+            span {
+               &:nth-child(1) {
+                  transform: translate(-50%, -50%) rotate(45deg);
+               }
+               &:nth-child(2) {
+                  transform: translate(-50%, -50%) rotate(-45deg);
+               }
+            }
+            img {
+               transform: rotate(180deg);
+            }
+         }
+      }
+   }
+
+   .faq__btn {
+      margin-top: 26px;
+   }
+
+   &__btn--mob {
+      display: none;
+   }
+
+   &__btn--desc {
+      width: 34px;
+      height: 34px;
+      border: unset;
+      border-radius: 0;
+
+      img {
+         @include transition;
+      }
+   }
+
+   /* Tablet*/
+   @media (max-width: 1099px) {
+      &__btn {
+         width: 30px;
+         height: 30px;
+         span {
+            width: 14px;
+         }
+      }
+
+      &__item-title {
+         font-size: 18px;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__top {
+         margin-bottom: 55px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__top {
+         margin-bottom: 48px;
+      }
+
+      .h2--ds {
+         display: none;
+      }
+
+      .h2--mb {
+         display: block;
+      }
+
+      &__subtitle {
+         margin-bottom: 34px;
+      }
+
+      &__list {
+         row-gap: 15px;
+      }
+
+      &__row {
+         padding: 16px 13px 16px 16px;
+      }
+
+      &__item-title {
+         font-size: 14px;
+         line-height: 1.85;
+         letter-spacing: 0.1px;
+         max-width: 294px;
+      }
+
+      &__btn {
+         width: 24px;
+         height: 24px;
+         border-radius: 6px;
+
+         span {
+            width: 13px;
+            height: 2px;
+         }
+      }
+
+      &__btn--mob {
+         display: block;
+      }
+      &__btn--desc {
+         display: none;
+      }
+   }
+}
+
+.entrepreneurs {
+   /* Mobile */
+   @media (max-width: 599px) {
+      &.margin-bottom {
+         margin-bottom: 46px;
+      }
+      .accordeon__top {
+         margin-bottom: 50px;
+      }
+
+      .accordeon__subtitle {
+         margin-bottom: 32px;
+      }
+   }
+}

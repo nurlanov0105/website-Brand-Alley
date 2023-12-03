@@ -1,0 +1,53 @@
+.box-nav {
+   display: flex;
+   align-items: center;
+   column-gap: 8px;
+
+   max-width: 242px;
+   &__round {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 42px;
+      height: 42px;
+
+      border-radius: 5px;
+      background-color: $ghost-white;
+
+      font-size: 14px;
+      font-weight: 500;
+
+      cursor: pointer;
+
+      svg {
+         width: 24px;
+         height: 24px;
+
+         path {
+            fill: $main-blue;
+         }
+      }
+
+      @include transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+         background-color: $gray-color;
+         color: $ghost-white;
+
+         svg {
+            path {
+               fill: $ghost-white;
+            }
+         }
+      }
+   }
+
+   &__round-left {
+   }
+
+   &__round-right {
+   }
+}

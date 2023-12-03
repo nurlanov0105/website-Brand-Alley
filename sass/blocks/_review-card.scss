@@ -1,0 +1,155 @@
+.review-card {
+   max-width: 370px;
+   width: 100%;
+
+   &__block {
+      margin-bottom: 11px;
+      border-radius: 20px;
+      background-color: $ghost-white;
+      padding: 22px 30px 60px;
+
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: 0;
+         right: 35%;
+         transform: translateY(100%);
+
+         width: 40px;
+         height: 31px;
+         clip-path: polygon(100% 0, 0 0, 100% 100%);
+         background-color: $ghost-white;
+      }
+   }
+
+   &__title {
+      margin-bottom: 8px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+   }
+
+   &__rate {
+      display: flex;
+      align-items: center;
+      column-gap: 3px;
+      margin-bottom: 17px;
+
+      svg {
+         width: 15px;
+         height: 14px;
+         path {
+            fill: $accent-color;
+         }
+      }
+   }
+
+   &__descr {
+      margin-bottom: 60px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+   }
+
+   &__imgs {
+      display: flex;
+      column-gap: 10px;
+   }
+
+   &__img {
+      width: 120px;
+      height: 120px;
+   }
+
+   &__avatar {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      column-gap: 36px;
+      padding-right: 41px;
+   }
+
+   &__bio {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.3;
+      span {
+         display: block;
+      }
+   }
+
+   &__ava-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+   }
+
+   &__video {
+      margin-bottom: 8px;
+      width: 100%;
+      height: 16rem;
+      background-color: $black-color;
+      border-radius: 10px;
+      cursor: pointer;
+   }
+
+   &__video-descr {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      color: $accent-color;
+   }
+
+   &--video {
+      .review-card__block {
+         padding: 22px 30px 43px;
+      }
+   }
+
+   /* Tablet*/
+   @media (max-width: 1099px) {
+      max-width: 358px;
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      max-width: 100%;
+      &__block {
+         padding: 24px 24px 80px;
+
+         &::after {
+            width: 38px;
+            height: 30px;
+         }
+      }
+
+      &__descr {
+         margin-bottom: 40px;
+      }
+
+      &__avatar {
+         padding-right: 54px;
+      }
+      &__ava-photo {
+         width: 60px;
+         height: 60px;
+      }
+   }
+
+   /* Mobile XS */
+   @media (max-width: 389px) {
+      &__avatar {
+         padding-right: 10%;
+      }
+   }
+
+   /* Mobile XS */
+   @media (max-width: 290px) {
+      &__avatar {
+         padding-right: 5%;
+      }
+   }
+}

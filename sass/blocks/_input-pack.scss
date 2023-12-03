@@ -1,0 +1,45 @@
+.input-pack {
+   display: flex;
+   flex-direction: column;
+   row-gap: 8px;
+   align-items: start;
+
+   &__box {
+      display: block;
+      position: relative;
+      width: 100%;
+   }
+
+   &__input {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px;
+
+      border-radius: 10px;
+      border: 1px solid $main-blue;
+      background-color: $main-white;
+
+      color: $main-blue;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.175px;
+
+      &::placeholder {
+         font-size: 14px;
+         font-weight: 400;
+         letter-spacing: -0.175px;
+         opacity: 0.6;
+      }
+   }
+
+   &__title {
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.175px;
+      color: #bcbcbc;
+   }
+
+   &--mb {
+      margin-bottom: 20px;
+   }
+}

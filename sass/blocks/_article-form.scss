@@ -1,0 +1,50 @@
+.article-form {
+   .article__row {
+      background-color: $main-white;
+      border: 1px solid $main-blue;
+   }
+   &__title {
+      margin-bottom: 28px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.175px;
+   }
+
+   &__form {
+      max-width: 470px;
+   }
+
+   .input-group {
+      margin-bottom: 20px;
+      row-gap: 11px;
+   }
+
+   &__btn {
+      margin-top: 38px;
+      width: 100%;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      .article__img {
+         display: none;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      .article__row {
+         padding: 40px 10px;
+         border-radius: 20px;
+      }
+
+      .input-group {
+         margin-bottom: 20px;
+      }
+      .article-form {
+         &__btn {
+            margin-top: 20px;
+         }
+      }
+   }
+}

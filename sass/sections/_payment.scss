@@ -1,0 +1,148 @@
+.payment {
+   padding-top: 7.2rem;
+   padding-bottom: 49px;
+   &__title {
+      margin-bottom: 19px;
+      &::before {
+         content: unset;
+      }
+   }
+
+   &__descr {
+      margin-bottom: 4.8rem;
+      font-size: 16px;
+      font-weight: 300;
+      color: $black-color;
+      p + p {
+         margin-top: 20px;
+      }
+   }
+
+   &__list {
+      list-style-position: inside;
+   }
+
+   &__item {
+      &:nth-child(1) {
+         margin-bottom: 32px;
+      }
+      &:nth-child(2) {
+         margin-bottom: 38px;
+      }
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.175px;
+   }
+
+   &__item-title {
+      display: inline-block;
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.175px;
+   }
+
+   &__item-descr {
+      font-size: 16px;
+      font-weight: 300;
+      color: $black-color;
+      text-align: justify;
+
+      p + p {
+         margin-top: 16px;
+      }
+   }
+
+   &__sublist {
+      margin-top: 16px;
+      list-style: none;
+
+      li {
+         padding-left: 15px;
+         font-size: 16px;
+         font-weight: 300;
+         line-height: 1.5;
+         color: $black-color;
+         text-align: justify;
+         position: relative;
+
+         &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+
+            width: 3px;
+            height: 3px;
+            background-color: $black-color;
+            border-radius: 100%;
+         }
+      }
+   }
+
+   &__btn {
+      margin-top: 16px;
+   }
+
+   &__item--pay {
+      .payment__item-descr {
+         p + p {
+            margin-top: 0;
+         }
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__sublist {
+         li::before {
+            top: 12px;
+            transform: unset;
+         }
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding-top: 39px;
+      padding-bottom: 60px;
+
+      &__title {
+         margin-bottom: 26px;
+      }
+
+      &__descr {
+         margin-bottom: 26px;
+         text-align: left;
+      }
+
+      &__item {
+         &:nth-child(1) {
+            margin-bottom: 26px;
+         }
+         &:nth-child(2) {
+            margin-bottom: 26px;
+         }
+      }
+
+      &__item-title {
+         margin-bottom: 26px;
+      }
+
+      &__sublist {
+         margin-top: 26px;
+      }
+
+      &__item-descr {
+         text-align: left;
+         p + p {
+            margin-top: 26px;
+         }
+      }
+
+      &__btn {
+         margin-top: 26px;
+      }
+   }
+}

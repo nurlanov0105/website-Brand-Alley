@@ -1,0 +1,65 @@
+.input-file {
+   position: relative;
+   width: 100%;
+   height: 80px;
+
+   padding: 14px 12px;
+   border-radius: 10px;
+   border: 1px solid $main-blue;
+   background-color: $main-white;
+
+   &__cloud {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+      width: 40px;
+      height: 40px;
+      pointer-events: none;
+   }
+
+   &__input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      position: absolute;
+      z-index: -10;
+   }
+
+   &__outer {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      flex-wrap: wrap;
+      row-gap: 10px;
+      overflow-y: auto;
+      max-height: 52px;
+
+      .input-file__data {
+         font-size: 14px;
+         font-weight: 400;
+         letter-spacing: -0.175px;
+         opacity: 0.6;
+         color: $accent-color;
+      }
+
+      img {
+         cursor: pointer;
+      }
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+   }
+}
+
+.other-place {
+   display: block;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+}

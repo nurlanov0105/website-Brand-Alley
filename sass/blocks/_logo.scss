@@ -1,0 +1,19 @@
+.logo {
+   width: 16rem;
+   flex-shrink: 0;
+
+   /* Tablet*/
+   @media (max-width: 1099px) {
+      width: 146px;
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      width: 126px;
+   }
+
+   /* Mobile XS */
+   @media (max-width: 319px) {
+      width: 12.6rem;
+   }
+}

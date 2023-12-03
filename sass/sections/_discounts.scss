@@ -1,0 +1,68 @@
+.discounts {
+   &.margin-bottom {
+      margin-bottom: 14.8rem;
+   }
+   &__title {
+      margin-bottom: 20px;
+
+      &::before {
+         content: unset;
+      }
+   }
+
+   &__descr {
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 60px;
+
+      p + p {
+         margin-top: 20px;
+      }
+   }
+
+   &__shops {
+   }
+
+   &__shops-title {
+      margin-bottom: 6rem;
+      &::before {
+         content: unset;
+      }
+   }
+
+   &__box {
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 20px;
+      row-gap: 28px;
+      flex-wrap: wrap;
+      margin-bottom: 6rem;
+   }
+
+   &__nav {
+      margin-left: unset;
+      margin-right: auto;
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding-top: 59px;
+      &.margin-bottom {
+         margin-bottom: 60px;
+      }
+
+      &__title {
+         margin-bottom: 28px;
+      }
+
+      &__shops-title {
+         margin-bottom: 28px;
+      }
+
+      &__row {
+         row-gap: 24px;
+      }
+   }
+}

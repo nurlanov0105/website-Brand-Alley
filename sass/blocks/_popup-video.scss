@@ -1,0 +1,41 @@
+.popup-video {
+   .popup__content {
+      width: 80vw;
+      height: 67rem;
+      padding: 2.5rem 4.5rem;
+      border-radius: 30px;
+      background: #000;
+   }
+
+   &__content {
+   }
+
+   &__title {
+      font-size: 3.6rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #fff;
+
+      span {
+         font-family: "Poppins";
+         font-weight: 275;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      .popup__cross {
+         right: 20px;
+      }
+      &__title {
+         font-size: 24px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__title {
+         font-size: 18px;
+      }
+   }
+}

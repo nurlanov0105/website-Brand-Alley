@@ -1,0 +1,66 @@
+.h1 {
+   font-size: 4.8rem;
+   font-weight: 900;
+   color: $main-blue;
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      font-size: 32px;
+      font-weight: 700;
+   }
+}
+
+.h2 {
+   font-size: 3.6rem;
+   font-weight: 900;
+   color: $main-blue;
+   position: relative;
+
+   &::before {
+      content: "";
+
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+
+      width: 68px;
+      height: 8px;
+      border-radius: 10px;
+      background-color: $accent-color;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      font-size: 28px;
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      font-size: 24px;
+
+      &::before {
+         bottom: -24px;
+      }
+   }
+
+   /* Mobile XS */
+   @media (max-width: 389px) {
+      font-size: 3.2rem;
+
+      &::before {
+         bottom: -16px;
+      }
+   }
+}
+
+.h3 {
+   font-size: 3.2rem;
+   font-weight: 700;
+   letter-spacing: -0.175px;
+   color: $main-blue;
+
+   /* Tablet*/
+   @media (max-width: 1099px) {
+      font-size: 24px;
+   }
+}

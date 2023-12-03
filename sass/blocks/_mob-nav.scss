@@ -1,0 +1,240 @@
+.mob-nav {
+   position: fixed;
+   top: -99999%;
+   left: 0;
+
+   z-index: -9999;
+   opacity: 0;
+
+   &--visible {
+      top: 0;
+      bottom: 0;
+      right: 0;
+
+      z-index: 10;
+      opacity: 1;
+      background-color: $main-white;
+
+      overflow-y: scroll;
+   }
+
+   .container {
+      width: 100%;
+   }
+   &__content {
+      padding: 15px 0 80px;
+   }
+
+   &__top {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      margin-bottom: 23px;
+   }
+
+   .mob-nav__burger {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+
+      svg {
+         display: none;
+         width: 14px;
+         height: 14px;
+
+         path {
+            fill: #1c1c1c;
+         }
+      }
+   }
+
+   &__search {
+      .search__input {
+         border: 1px solid $accent-color;
+         background-color: $main-white;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+   }
+
+   &__item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 6px;
+
+      padding: 14px 10px 15px;
+      z-index: 2;
+
+      span {
+         font-size: 16px;
+         font-weight: 500;
+      }
+
+      img {
+         width: 24px;
+         height: 24px;
+         @include transition;
+      }
+
+      &:hover {
+         background-color: $ghost-white;
+      }
+
+      cursor: pointer;
+   }
+
+   &__sublist {
+      margin-left: 23px;
+      margin-left: 23px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: -1;
+   }
+
+   &__subitem {
+      padding: 14px 10px;
+
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.33;
+      letter-spacing: -0.187px;
+
+      a {
+         display: block;
+      }
+
+      &:hover {
+         background-color: $ghost-white;
+      }
+      cursor: pointer;
+   }
+
+   &__btn {
+      margin-bottom: 32px;
+      padding: 0 40px;
+   }
+
+   .mob-nav__item-link {
+      display: block;
+      padding: 14px 10px 15px;
+
+      font-size: 16px;
+      font-weight: 500;
+   }
+
+   &__contacts {
+   }
+
+   &__title {
+      margin-bottom: 16px;
+      color: #000;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+   }
+
+   &__list-2 {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+   }
+
+   &__item-2 {
+      display: flex;
+      column-gap: 10px;
+   }
+
+   &__item-2-link {
+      display: flex;
+      column-gap: 16px;
+
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.5;
+   }
+
+   &__item-2-city {
+      display: inline-block;
+      padding-left: 26px;
+      position: relative;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: translateY(-50%);
+
+         width: 16px;
+         height: 16px;
+         background: url("../img/svg/mob-nav/phone.svg") center / cover no-repeat;
+      }
+   }
+
+   &__item-2-social {
+      display: inline-block;
+      padding-left: 26px;
+      position: relative;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: translateY(-50%);
+
+         width: 16px;
+         height: 16px;
+         background: url("../img/svg/mob-nav/whatsapp.svg") center / cover no-repeat;
+      }
+   }
+
+   // Поведение по клику
+   &__item {
+      &.active {
+         .mob-nav__item-row {
+            background-color: $ghost-white;
+
+            img {
+               transform: rotate(180deg);
+            }
+         }
+         .mob-nav__sublist {
+            width: unset;
+            height: unset;
+            opacity: 1;
+            z-index: 1;
+            transition: opacity 0.3s ease-in;
+         }
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__content {
+         padding: 10px 0 80px;
+      }
+
+      .mob-nav__burger {
+         span {
+            display: none;
+         }
+
+         svg {
+            display: inline-block;
+         }
+      }
+   }
+}
+
+.nav-burger {
+}

@@ -1,0 +1,37 @@
+.radio {
+   position: relative;
+   &__real {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: -1;
+      appearance: none;
+   }
+
+   &__custom {
+      flex-shrink: 0;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+
+      height: 44px;
+      padding: 0 27px;
+
+      border-radius: 6px;
+      background-color: $ghost-white;
+      font-size: 14px;
+      font-weight: 300;
+
+      @include transition;
+   }
+
+   .radio__real:focus + .radio__custom {
+      background-color: $accent-color;
+      color: $main-white;
+   }
+   .radio__real:checked + .radio__custom {
+      background-color: $accent-color;
+      color: $main-white;
+   }
+}

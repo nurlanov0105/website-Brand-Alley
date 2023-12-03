@@ -1,0 +1,251 @@
+.user-personal {
+   padding: 4rem 3.5rem 10.4rem;
+   &__form {
+   }
+
+   &__row {
+      display: flex;
+      align-items: start;
+      column-gap: 6.4rem;
+   }
+
+   &__avatar {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 12px;
+      margin-top: 7.8rem;
+   }
+
+   &__img {
+      display: inline-block;
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+   }
+
+   &__title {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1.5;
+   }
+
+   &__btn {
+      max-width: 204px;
+      width: 100%;
+      height: 40px;
+      border-radius: 6px;
+   }
+
+   &__label {
+   }
+
+   &__input {
+   }
+
+   &__name {
+   }
+
+   &__content {
+   }
+
+   &__fieldset {
+      display: flex;
+   }
+
+   &__bio {
+      margin-bottom: 32px;
+      column-gap: 20px;
+      .profile-label {
+         max-width: 180px;
+      }
+   }
+
+   &__contacts {
+      column-gap: 32px;
+      margin-bottom: 4.8rem;
+   }
+
+   &__btns {
+      display: flex;
+      column-gap: 32px;
+   }
+
+   &__btn-form {
+      width: 100%;
+      height: 40px;
+      border-radius: 6px;
+   }
+
+   .btn--ghost {
+      span {
+         color: $main-blue;
+      }
+      &:hover,
+      &:focus {
+         span {
+            color: $main-white;
+         }
+      }
+
+      &:active {
+         span {
+            color: $main-white;
+         }
+      }
+   }
+
+   &__bottom {
+      margin-top: 6rem;
+
+      .user-personal__title {
+         margin-bottom: 4rem;
+      }
+   }
+
+   &__col {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+   }
+}
+
+.profile-label {
+   display: flex;
+   flex-direction: column;
+   row-gap: 8px;
+   width: 100%;
+
+   &__title {
+      font-size: 14px;
+      font-weight: 300;
+   }
+
+   &__wrapper {
+      position: relative;
+      display: block;
+   }
+
+   &__input {
+      width: 100%;
+      height: 40px;
+
+      padding: 0 8px;
+      border-radius: 4px;
+      border: 1px solid #8b8b8b;
+
+      &::placeholder {
+         font-size: 14px;
+         font-weight: 300;
+         color: #8b8b8b;
+      }
+   }
+}
+
+.avatar-label {
+   &__input {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: -1;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+   }
+
+   &__name {
+   }
+}
+
+.user-personal {
+   /* Tablet Big */
+   @media (max-width: 1099px) {
+      &__row {
+         column-gap: 20px;
+      }
+
+      &__btn-form {
+         span {
+            font-size: 14px;
+         }
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__avatar {
+         display: none;
+      }
+
+      &__row {
+         flex-direction: column;
+      }
+
+      &__content {
+         width: 100%;
+      }
+
+      &__btn {
+         display: none;
+      }
+
+      &__fieldset {
+         flex-direction: column;
+         row-gap: 16px;
+      }
+
+      &__bio {
+         margin-bottom: 16px;
+         .profile-label {
+            max-width: 100%;
+         }
+      }
+
+      &__contacts {
+         margin-bottom: 32px;
+      }
+
+      &__btns {
+         flex-direction: column;
+         row-gap: 16px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding: 32px 16px 36px;
+
+      &__top {
+         margin-bottom: 32px;
+      }
+
+      &__btns {
+         margin-bottom: 0;
+      }
+
+      &__bottom {
+         margin-top: 32px;
+         .user-personal__title {
+            margin-bottom: 32px;
+         }
+
+         .user-personal__col {
+            row-gap: 16px;
+         }
+      }
+   }
+}

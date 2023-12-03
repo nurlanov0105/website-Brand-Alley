@@ -1,0 +1,236 @@
+.assortment {
+   &__receipts {
+      margin-bottom: 40px;
+   }
+
+   &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+   }
+
+   &__title {
+      &::before {
+         content: unset;
+      }
+   }
+
+   .filter-btn {
+      display: none;
+
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.175px;
+      text-decoration-line: underline;
+      color: $accent-color;
+      cursor: pointer;
+   }
+
+   &__benefits {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      margin-bottom: 40px;
+   }
+
+   &__benefit {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      span {
+         font-size: 16px;
+         font-weight: 300;
+      }
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 61px;
+   }
+
+   &__list {
+      padding-top: 64px;
+   }
+
+   &__box {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 28px;
+      margin-bottom: 60px;
+   }
+
+   &__card {
+      max-width: 273px;
+      width: 100%;
+
+      &--empty {
+         .assortment__card-box {
+            background-color: $ghost-white;
+         }
+      }
+
+      &-desc {
+         display: flex;
+         flex-direction: column;
+         flex-grow: 1;
+      }
+
+      &-mob {
+         display: none;
+      }
+   }
+
+   &__card-box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      padding: 14px 20px 20px;
+      height: 273px;
+
+      border-radius: 30px;
+      background: #5f5f5f;
+      overflow: hidden;
+      color: $main-white;
+   }
+
+   &__card-title {
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-weight: 900;
+      text-align: center;
+   }
+
+   &__card-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+   }
+
+   &__card-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {
+         max-width: 108px;
+         font-size: 14px;
+         font-weight: 300;
+      }
+      img {
+         margin-left: auto;
+      }
+   }
+
+   &__card-link {
+      margin-top: auto;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 500;
+      color: $main-white;
+   }
+
+   &__card-btn {
+   }
+   &__nav {
+      margin-left: auto;
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1099px) {
+      &__benefits {
+         flex-direction: column;
+         row-gap: 16px;
+         align-items: start;
+      }
+
+      &__list {
+         padding-top: 0;
+      }
+   }
+
+   /* Laptop */
+   @media (max-width: 1249px) {
+      &__nav {
+         margin-left: unset;
+         margin-right: auto;
+      }
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1099px) {
+      &__card {
+         max-width: 250px;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__row {
+         column-gap: 40px;
+      }
+
+      .receipts__row {
+         column-gap: 12px;
+      }
+      .filter-btn {
+         display: inline-block;
+      }
+      &__filter {
+         display: none;
+      }
+      &__card-box {
+         background-color: $ghost-white;
+      }
+
+      &__card {
+         &-desc {
+            display: none;
+         }
+
+         &-mob {
+            display: block;
+         }
+
+         &-imgs {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            align-items: end;
+         }
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__box {
+         row-gap: 24px;
+         margin-bottom: 40px;
+      }
+      &__card {
+         &:nth-last-child(-n + 4) {
+            display: none;
+         }
+         max-width: 169px;
+
+         &-imgs {
+            span {
+               display: inline-block;
+               width: 20px;
+            }
+         }
+      }
+      &__card-box {
+         height: 169px;
+         margin-bottom: 16px;
+         padding: 16px;
+      }
+   }
+
+   /* Mobile XS */
+   @media (max-width: 389px) {
+      &__card {
+         max-width: 100%;
+      }
+   }
+}

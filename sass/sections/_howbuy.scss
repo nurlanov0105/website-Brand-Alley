@@ -1,0 +1,117 @@
+.howbuy {
+   &--pb {
+      padding-bottom: 100px;
+   }
+   &__title {
+      margin-bottom: 60px;
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 20px;
+      flex-wrap: wrap;
+      row-gap: 20px;
+   }
+
+   &__card {
+      max-width: 22.4rem;
+      width: 100%;
+
+      position: relative;
+
+      &::before {
+         content: attr(data-num);
+         position: absolute;
+         top: 0;
+         left: 32px;
+         transform: translateY(-45%);
+
+         width: 40px;
+         height: 40px;
+
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         border-radius: 10px;
+         background-color: $main-white;
+         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+
+         font-size: 20px;
+         font-weight: 700;
+         color: #000;
+      }
+   }
+
+   &__card-img {
+      padding: 32px;
+      margin-bottom: 20px;
+      border-radius: 30px;
+      background-color: $ghost-white;
+   }
+
+   &__card-descr {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 300;
+
+      p + p {
+         margin-top: 15px;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__title {
+         margin-bottom: 50px;
+      }
+      &__row {
+         flex-direction: column;
+         row-gap: 32px;
+      }
+
+      &__card {
+         display: flex;
+         align-items: center;
+         column-gap: 32px;
+         max-width: 100%;
+      }
+
+      &__card-img {
+         width: 157px;
+         flex-shrink: 0;
+         border-radius: 20px;
+      }
+      &__card-descr {
+         text-align: unset;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__title {
+         margin-bottom: 24px;
+      }
+      &__row {
+         row-gap: 26px;
+      }
+      &__card {
+         &::before {
+            left: 11px;
+            transform: translateY(-60%);
+            width: 17px;
+            height: 16px;
+
+            font-size: 10px;
+            border-radius: 5px;
+         }
+      }
+
+      &__card-img {
+         width: 74px;
+         border-radius: 10px;
+         padding: 13px;
+         margin: unset;
+      }
+   }
+}

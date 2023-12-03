@@ -1,0 +1,22 @@
+.stars {
+   display: inline-flex;
+   align-items: center;
+   &__star {
+      cursor: pointer;
+      svg {
+         width: 19px;
+         height: 18px;
+         path {
+            fill: #bcbcbc;
+         }
+      }
+
+      &.active {
+         svg {
+            path {
+               fill: $accent-color;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,157 @@
+.terms {
+   ol {
+      list-style: none;
+      counter-reset: li;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   li {
+      position: relative;
+   }
+
+   b {
+      font-weight: 500;
+   }
+
+   &__list {
+      list-style-position: inside;
+   }
+
+   &__item {
+      margin-bottom: 24px;
+      counter-increment: num;
+      list-style-position: inside;
+
+      &::before {
+         position: absolute;
+         top: 0;
+         content: counter(num) ".";
+         font-size: 24px;
+         font-weight: 500;
+      }
+   }
+
+   &__title {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 500;
+
+      span {
+         display: inline-block;
+         padding-left: 25px;
+      }
+   }
+
+   &__descr {
+      font-size: 14px;
+      font-weight: 300;
+   }
+
+   &__sublist {
+   }
+
+   &__subitem {
+      list-style-position: inside;
+
+      span {
+         position: relative;
+         padding-left: 8px;
+
+         &::before {
+            content: "-";
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+
+            font-size: 14px;
+            font-weight: 300;
+         }
+      }
+   }
+
+   &__sublist-2 {
+   }
+
+   &__subitem-2 {
+      list-style-position: inside;
+
+      span {
+         position: relative;
+         padding-left: 12px;
+
+         &::before {
+            content: "•";
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+
+            font-size: 14px;
+            font-weight: 300;
+         }
+      }
+   }
+
+   &__pt {
+      margin-top: 20px;
+   }
+   &.margin-bottom {
+      margin-bottom: 116px;
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding-top: 40px;
+
+      &__title {
+         margin-bottom: 16px;
+      }
+
+      &__subitem-2 {
+         padding-left: 24px;
+
+         span {
+            padding-left: 0;
+
+            &::before {
+               left: -10px;
+            }
+         }
+      }
+
+      &.margin-bottom {
+         margin-bottom: 123px;
+      }
+   }
+   /* Mobile XS */
+   @media (max-width: 389px) {
+      .line-mb {
+         display: none;
+      }
+
+      &__title {
+         font-size: 18px;
+
+         span {
+            padding-left: 20px;
+         }
+      }
+
+      .terms__item::before {
+         font-size: 18px;
+      }
+
+      .span-padding {
+         padding-left: 30px !important;
+      }
+   }
+}
+.margin-bottom {
+}
+.container {
+}

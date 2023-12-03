@@ -1,0 +1,189 @@
+.businessmans {
+   padding-top: 7.5rem;
+   &__title {
+      margin-bottom: 6rem;
+      &::before {
+         content: unset;
+      }
+   }
+
+   &__block {
+   }
+
+   &__subtitle {
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 700;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+   }
+
+   &__item {
+      position: relative;
+      padding-left: 21px;
+      font-size: 14px;
+      font-weight: 300;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 7px;
+         left: 10px;
+
+         width: 3px;
+         height: 3px;
+         background-color: $black-color;
+         border-radius: 100%;
+      }
+   }
+
+   &__how {
+   }
+
+   &__buy {
+   }
+}
+
+.how-work {
+   &__subtitle {
+      margin-bottom: 32px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+      column-gap: 24px;
+   }
+
+   &__img {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+   }
+
+   &__text {
+      font-size: 24px;
+      font-weight: 300;
+   }
+
+   &__title {
+   }
+}
+.what-buy {
+   &__title {
+      margin-bottom: 32px;
+   }
+   &__row {
+      display: flex;
+      column-gap: 19px;
+      row-gap: 24px;
+      flex-wrap: wrap;
+   }
+
+   &__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 12px;
+      max-width: 184px;
+      width: 100%;
+   }
+
+   &__img {
+      width: 100%;
+   }
+
+   &__name {
+      font-size: 16px;
+      font-weight: 500;
+      color: $black-color;
+      text-align: center;
+   }
+}
+
+/* Tablet Small*/
+@media (max-width: 899px) {
+   .businessmans {
+      &__subtitle {
+         font-size: 20px;
+      }
+   }
+
+   .how-work {
+      &__title {
+         margin-bottom: 24px;
+      }
+      &__text {
+         font-size: 16px;
+      }
+   }
+
+   .what-buy {
+      &__title {
+         margin-bottom: 24px;
+      }
+
+      &__card {
+         max-width: 174px;
+      }
+   }
+}
+
+/* Mobile */
+@media (max-width: 599px) {
+   .businessmans {
+      padding-top: 40px;
+      &.margin-bottom {
+         margin-bottom: 40px;
+      }
+
+      &__title {
+         margin-bottom: 58px;
+      }
+
+      &__subtitle {
+         font-size: 16px;
+      }
+
+      &__block.margin-bottom {
+         margin-bottom: 40px;
+      }
+   }
+
+   .how-work {
+      &__title {
+         font-size: 24px;
+      }
+      &__list {
+         row-gap: 32px;
+      }
+      &__text {
+         font-size: 14px;
+      }
+   }
+
+   .what-buy {
+      &__title {
+         margin-bottom: 67px;
+         font-size: 24px;
+      }
+      &__row {
+         column-gap: 20px;
+         row-gap: 20px;
+      }
+
+      &__card {
+         max-width: 169px;
+      }
+   }
+}

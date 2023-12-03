@@ -1,0 +1,328 @@
+.sale {
+   &__top {
+      margin-bottom: 58px;
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 40px;
+      position: relative;
+      font-family: "Montserrat";
+      color: $main-white;
+
+      max-width: 1132px;
+      // overflow: hidden;
+   }
+
+   &__card {
+      display: inline-block;
+      max-width: 350px;
+      width: 100%;
+      height: 46rem;
+      border-radius: 30px;
+
+      background: linear-gradient(
+            0deg,
+            rgba(2, 22, 44, 0.8) 0%,
+            rgba(2, 22, 44, 0.64) 19.21%,
+            rgba(2, 22, 44, 0) 63.59%
+         ),
+         url("../img/new-products/01.jpg") center / cover no-repeat;
+
+      position: relative;
+      overflow: hidden;
+
+      &--1 {
+         background: linear-gradient(
+               0deg,
+               rgba(2, 22, 44, 0.8) 0%,
+               rgba(2, 22, 44, 0.64) 19.21%,
+               rgba(2, 22, 44, 0) 63.59%
+            ),
+            url("../img/new-products/01.jpg") center / cover no-repeat;
+      }
+      &--2 {
+         background: linear-gradient(
+               0deg,
+               rgba(2, 22, 44, 0.8) 0%,
+               rgba(2, 22, 44, 0.64) 19.21%,
+               rgba(2, 22, 44, 0) 63.59%
+            ),
+            url("../img/new-products/02.jpg") center / cover no-repeat;
+      }
+      &--3 {
+         background: linear-gradient(
+               0deg,
+               rgba(2, 22, 44, 0.8) 0%,
+               rgba(2, 22, 44, 0.64) 19.21%,
+               rgba(2, 22, 44, 0) 63.59%
+            ),
+            url("../img/new-products/03.jpg") center / cover no-repeat;
+      }
+   }
+
+   &__naming {
+      position: absolute;
+
+      font-size: 3.6rem;
+      font-weight: 700;
+      letter-spacing: 0.36px;
+
+      &--1 {
+         max-width: 234px;
+      }
+   }
+
+   &__card-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 30px 28px 34px;
+      border-radius: 30px;
+      background: rgba(2, 22, 44, 0.8);
+   }
+
+   &__card-title {
+      margin-bottom: 38px;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 0.36px;
+   }
+
+   &__card-descr {
+      font-size: 20px;
+      font-weight: 300;
+      letter-spacing: 0.2px;
+   }
+
+   &__card-name {
+      margin-top: auto;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0.2px;
+   }
+
+   &__prev {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+         transform: rotate(-180deg);
+         width: 15px;
+         height: 26px;
+         path {
+            fill: $accent-color;
+         }
+      }
+
+      &.active {
+         display: inline-flex;
+         position: absolute;
+         top: 40%;
+         left: -6px;
+         transform: translateX(-100%);
+         z-index: 2;
+      }
+   }
+   &__next {
+      position: absolute;
+      top: 40%;
+      right: -6px;
+      transform: translateX(100%);
+      z-index: 2;
+
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+         width: 15px;
+         height: 26px;
+         path {
+            fill: $accent-color;
+         }
+      }
+   }
+
+   &--offer {
+      .sale__card {
+         &--1 {
+            background: linear-gradient(
+                  0deg,
+                  rgba(2, 22, 44, 0.8) 0%,
+                  rgba(2, 22, 44, 0.64) 19.21%,
+                  rgba(2, 22, 44, 0) 63.59%
+               ),
+               url("../img/new-products/04.jpg") center / cover no-repeat;
+         }
+         &--2 {
+            background: linear-gradient(
+                  0deg,
+                  rgba(2, 22, 44, 0.8) 0%,
+                  rgba(2, 22, 44, 0.64) 19.21%,
+                  rgba(2, 22, 44, 0) 63.59%
+               ),
+               url("../img/new-products/05.jpg") center / cover no-repeat;
+         }
+         &--3 {
+            background: linear-gradient(
+                  0deg,
+                  rgba(2, 22, 44, 0.8) 0%,
+                  rgba(2, 22, 44, 0.64) 19.21%,
+                  rgba(2, 22, 44, 0) 63.59%
+               ),
+               url("../img/new-products/06.jpg") center / cover no-repeat;
+         }
+      }
+   }
+
+   .owl-item {
+      max-width: 350px !important;
+   }
+
+   /* Laptop */
+   @media (max-width: 1319px) {
+      &__prev {
+         &.active {
+            left: 0;
+            transform: translateX(-80%);
+         }
+      }
+   }
+
+   /* Laptop */
+   @media (max-width: 1249px) {
+      &__next {
+         display: none;
+      }
+      &__prev {
+         display: none !important;
+      }
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1219px) {
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__naming {
+         font-size: 16px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      .container {
+         width: 100%;
+         padding-right: 0;
+         padding-left: 25px;
+      }
+      &__top {
+         flex-direction: column;
+         row-gap: 40px;
+         align-items: start;
+         margin-bottom: 32px;
+
+         width: 358px;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      &__card {
+         height: 251px;
+      }
+   }
+
+   /* Mobile XS */
+   @media (max-width: 389px) {
+      &__top {
+         width: unset;
+      }
+   }
+}
+
+.sale__card {
+   &:nth-child(1) {
+      .sale__naming {
+         bottom: 25px;
+         left: 28px;
+      }
+   }
+   &:nth-child(2) {
+      .sale__naming {
+         bottom: 16px;
+         left: 35px;
+      }
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1219px) {
+      &-content {
+         padding: 22px 14px 24px;
+      }
+      &-title {
+         font-size: 34px;
+         margin-bottom: 20px;
+      }
+
+      &-descr {
+         font-size: 20px;
+      }
+
+      &-name {
+         font-size: 22px;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &-content {
+         padding: 20px 12px 24px;
+      }
+      &-title {
+         font-size: 22px;
+         margin-bottom: 30px;
+      }
+
+      &-descr {
+         font-size: 16px;
+      }
+
+      &-name {
+         font-size: 16px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &-content {
+         padding: 17px 10px 20px;
+      }
+      &-title {
+         font-size: 16px;
+         margin-bottom: 25px;
+      }
+
+      &-descr {
+         font-size: 14px;
+      }
+
+      &-name {
+         font-size: 14px;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+         .sale__naming {
+            bottom: 24px;
+            left: 10px;
+         }
+      }
+   }
+}

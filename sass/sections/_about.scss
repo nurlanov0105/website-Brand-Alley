@@ -1,0 +1,132 @@
+.about {
+   &__row {
+      display: flex;
+      align-items: center;
+      column-gap: 64px;
+   }
+
+   &__main-title {
+      &::before {
+         content: unset;
+      }
+      margin-bottom: 60px;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+   }
+
+   &__descr {
+      font-size: 14px;
+      font-weight: 300;
+      p + p {
+         margin-top: 16px;
+      }
+   }
+
+   &__right {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+   }
+
+   &__img {
+      width: 42.2rem;
+      border-radius: 30px;
+      overflow: hidden;
+
+      &:nth-child(1) {
+         height: 28.1rem;
+      }
+      &:nth-child(2) {
+         height: 22.4rem;
+      }
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &__descr-more {
+      display: none;
+
+      font-size: 14px;
+      font-weight: 300;
+      color: $accent-color;
+      cursor: pointer;
+   }
+
+   /* Tablet Big */
+   @media (max-width: 1219px) {
+      &__row {
+         column-gap: 40px;
+      }
+   }
+
+   /* Tablet */
+   @media (max-width: 1099px) {
+      .about__text {
+         &:nth-last-child(-n + 3) {
+            display: none;
+         }
+      }
+
+      &__descr-more {
+         display: block;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__row {
+         column-gap: 32px;
+      }
+      &__img {
+         width: 250px;
+      }
+      .about__text {
+         &:nth-last-child(-n + 5) {
+            display: none;
+         }
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__row {
+         flex-direction: column;
+         row-gap: 40px;
+         align-items: start;
+      }
+
+      &__right {
+         row-gap: 24px;
+      }
+
+      &__title {
+         margin-bottom: 24px;
+      }
+
+      &__img {
+         width: 100%;
+
+         &:nth-child(1) {
+            height: 200px;
+         }
+         &:nth-child(2) {
+            height: 224px;
+         }
+      }
+
+      &__descr {
+         p + p {
+            margin-top: 12px;
+         }
+      }
+
+      .about__text {
+         display: none;
+      }
+   }
+}

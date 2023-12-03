@@ -1,0 +1,62 @@
+.popular-brands {
+   &__top {
+      margin-bottom: 5.8rem;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+   }
+
+   &__item {
+      height: 8.4rem;
+      padding: 0 16px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 20px;
+      background-color: $ghost-white;
+
+      span {
+         font-size: 24px;
+         font-weight: 500;
+      }
+      cursor: pointer;
+      @include transition;
+
+      &.active {
+         background-color: $accent-color;
+         span {
+            color: $main-white;
+         }
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__item {
+         span {
+            font-size: 20px;
+         }
+         border-radius: 10px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__top {
+         flex-direction: column;
+         row-gap: 40px;
+         align-items: start;
+         margin-bottom: 32px;
+      }
+
+      &__item {
+         font-size: 16px;
+         height: 48px;
+      }
+   }
+}

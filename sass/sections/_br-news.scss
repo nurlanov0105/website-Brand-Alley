@@ -1,0 +1,118 @@
+.br-news {
+   padding: 5.4rem 0 7.1rem;
+   background: linear-gradient(180deg, #f7f8fa 0%, #edf1f5 100%);
+   &__top {
+      margin-bottom: 34px;
+
+      .h2 {
+         &::before {
+            content: unset;
+         }
+      }
+
+      .section__link {
+         text-decoration: none;
+      }
+   }
+   .br-news__top-link {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.2px;
+   }
+   &__row {
+      display: flex;
+      column-gap: 32px;
+   }
+
+   &__card {
+      max-width: 378px;
+      width: 100%;
+      border-radius: 10px 10px 0 0px;
+      overflow: hidden;
+   }
+
+   &__img {
+      margin-bottom: 19px;
+
+      width: 37.8rem;
+   }
+
+   &__date {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: rgba(2, 22, 44, 0.4);
+   }
+
+   &__title {
+      margin-bottom: 14px;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.19;
+      letter-spacing: -0.404px;
+   }
+
+   &__link {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: #fe6666 !important;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__row {
+         flex-direction: column;
+         align-items: center;
+         row-gap: 40px;
+      }
+      &__img {
+         width: 100%;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding: 32px 0 29px;
+
+      &__row > *:not(:nth-child(1), :nth-child(2)) {
+         display: none;
+      }
+      &__top {
+         margin-bottom: 24px;
+      }
+
+      &__img {
+         margin-bottom: 16px;
+         height: 283px;
+
+         img {
+            height: 100%;
+         }
+      }
+      &__date {
+         margin-bottom: 16px;
+         font-size: 10px;
+         opacity: 0.4;
+      }
+
+      &__title {
+         margin-bottom: 8px;
+         font-size: 14px;
+         line-height: 1.78;
+      }
+
+      &__link {
+         font-size: 14px;
+      }
+   }
+   /* Mobile XS */
+   @media (max-width: 389px) {
+      &__img {
+         height: unset;
+      }
+   }
+}

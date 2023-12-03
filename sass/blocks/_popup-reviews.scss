@@ -1,0 +1,179 @@
+.popup-reviews {
+   &__title {
+      margin-bottom: 28px;
+   }
+   .popup__content {
+      padding: 5.6rem 6rem;
+      width: 711px;
+      max-height: 90vh;
+
+      overflow-y: auto;
+   }
+   .popup__cross {
+      top: 62px;
+      right: 66px;
+   }
+   &__content {
+   }
+
+   &__form {
+   }
+
+   &__rates {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      margin-bottom: 20px;
+   }
+
+   &__descr {
+      font-size: 14px;
+      font-weight: 300;
+   }
+
+   .form-group {
+      flex-direction: row;
+      column-gap: 21px;
+      &__label {
+         display: flex;
+         column-gap: 0;
+         flex-direction: column;
+         row-gap: 10px;
+         align-items: start;
+         width: 100%;
+      }
+
+      &__title {
+         font-size: 14px;
+         font-weight: 300;
+         color: $main-blue;
+      }
+   }
+
+   &__inputs {
+      margin-bottom: 28px;
+      .form-group__label {
+         &:nth-child(1) {
+            max-width: 230px;
+         }
+         &:nth-child(2) {
+            max-width: 340px;
+         }
+      }
+   }
+
+   &__textarea {
+      margin-bottom: 28px;
+
+      .counter {
+         position: absolute;
+         bottom: 7px;
+         right: 14px;
+      }
+   }
+
+   &__file {
+      margin-bottom: 28px;
+      input {
+         height: 8rem;
+      }
+   }
+
+   &__btn {
+      width: 100%;
+      height: 44px;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      .popup__content {
+         width: 70vw;
+      }
+
+      .popup__cross {
+         width: 24px;
+         height: 24px;
+
+         span {
+            width: 24px;
+         }
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &.active {
+         top: 0px;
+         bottom: 0;
+         left: 0px;
+         right: 0;
+         transform: unset;
+      }
+
+      .popup__cross {
+         display: none;
+      }
+
+      .popup__content {
+         width: 100%;
+         height: 100%;
+         max-height: 100%;
+
+         padding: 0;
+         background-color: $main-white;
+         border-radius: 0;
+      }
+
+      &__content {
+         margin-bottom: 55px;
+      }
+
+      &__title {
+         margin-bottom: 40px;
+      }
+
+      &__rates {
+         margin-bottom: 22px;
+      }
+
+      .popup-reviews__inputs {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 16px;
+      }
+
+      .form-group__label {
+         &:nth-child(1),
+         &:nth-child(2) {
+            max-width: 100%;
+         }
+      }
+
+      .popup-reviews__textarea {
+         margin-bottom: 16px;
+      }
+
+      .popup-reviews__file {
+         margin-bottom: 20px;
+      }
+
+      .popup-reviews__btn {
+         height: 44px;
+
+         span {
+            font-size: 14px;
+         }
+      }
+   }
+}
+.h3 {
+}
+
+.input-box {
+   &__input {
+   }
+}
+.textarea-box {
+   &__textarea {
+   }
+}

@@ -1,0 +1,54 @@
+.clothes-var {
+   &__row {
+      display: flex;
+      column-gap: 32px;
+   }
+
+   &__card {
+      max-width: 584px;
+      width: 100%;
+      height: 58.4rem;
+
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+
+      &:nth-child(1) {
+         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+            url("../img/shoes/01.jpg") center / cover no-repeat;
+      }
+      &:nth-child(2) {
+         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
+            url("../img/shoes/02.jpg") center / cover no-repeat;
+      }
+   }
+
+   &__title {
+      position: absolute;
+      bottom: 40px;
+      left: 20px;
+
+      font-size: 6rem;
+      font-weight: 900;
+      color: $main-white;
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      &__title {
+         font-size: 32px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__row {
+         flex-direction: column;
+         row-gap: 20px;
+      }
+
+      &__title {
+         font-size: 24px;
+      }
+   }
+}

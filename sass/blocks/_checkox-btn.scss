@@ -1,0 +1,42 @@
+.checkox-btn {
+   display: block;
+
+   &__real {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: -1;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &:checked ~ .checkox-btn__custom {
+         background-color: $accent-color;
+         transition: background-color 0.2s ease-out;
+         color: $main-white;
+      }
+   }
+
+   &__custom {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      height: 44px;
+      padding: 0 27px;
+      border-radius: 6px;
+      background-color: $ghost-white;
+
+      font-size: 14px;
+      font-weight: 300;
+      color: $main-blue;
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__custom--long {
+         padding: 0 8px;
+      }
+   }
+}

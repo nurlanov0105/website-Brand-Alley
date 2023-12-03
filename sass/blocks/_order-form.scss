@@ -1,0 +1,152 @@
+.order-form {
+   &__title {
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.175px;
+      color: #1a2030;
+   }
+
+   &__box {
+      display: flex;
+      column-gap: 12px;
+      margin-bottom: 26px;
+   }
+
+   &__row {
+      display: flex;
+      column-gap: 32px;
+      & + & {
+         margin-top: 29px;
+      }
+   }
+
+   &__inner-row {
+      display: flex;
+      column-gap: 32px;
+      flex-shrink: 0;
+
+      .input-pack {
+         flex-shrink: 0;
+      }
+   }
+
+   &__btns {
+      display: flex;
+      column-gap: 16px;
+      .btn--ghost {
+         span {
+            color: $main-blue;
+         }
+
+         &:hover,
+         &:focus,
+         &:active {
+            span {
+               color: $main-white;
+            }
+         }
+      }
+   }
+
+   &__btn {
+      padding: 0 27px;
+      height: 44px;
+      border-radius: 6px;
+      span {
+         font-size: 14px;
+         font-weight: 300;
+      }
+   }
+
+   &__btn--delivery {
+   }
+
+   &__btn--tariff {
+   }
+
+   &__checkboxes {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      .checkox-2__custom {
+         border-radius: 2px;
+      }
+   }
+
+   &__top {
+      display: inline-flex;
+      align-items: center;
+      column-gap: 20px;
+      margin-bottom: 25px;
+
+      .order-form__title {
+         margin-bottom: 0;
+      }
+   }
+
+   &__paynow {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+
+      span {
+         font-size: 14px;
+         font-weight: 300;
+         color: $black-color;
+      }
+   }
+
+   &__cards {
+      display: flex;
+      column-gap: 16px;
+   }
+
+   /* Laptop */
+   @media (max-width: 1249px) {
+      &__box {
+         flex-direction: column;
+         row-gap: 16px;
+      }
+      &__row {
+         flex-direction: column;
+         row-gap: 16px;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      &__title {
+         margin-bottom: 20px;
+         font-size: 24px;
+      }
+
+      &__title--personal {
+         margin-bottom: 32px;
+      }
+      &__box {
+         margin-bottom: 16px;
+      }
+
+      &__inner-row {
+         column-gap: 30px;
+      }
+
+      .order-form--sign {
+         &::after {
+            content: unset;
+         }
+      }
+
+      .checkox-2 {
+         align-items: start;
+      }
+
+      &__cards--mb {
+         flex-direction: column;
+         row-gap: 16px;
+      }
+   }
+}

@@ -1,0 +1,66 @@
+.feedback-m {
+   &__box {
+      margin-bottom: 60px;
+   }
+
+   .popup-feedback__btns {
+      margin-bottom: 40px;
+   }
+
+   .feedback-form__box {
+      row-gap: 16px;
+      margin-bottom: 40px;
+   }
+
+   .textarea {
+      max-height: unset;
+      height: 260px;
+   }
+}
+.container {
+}
+.popup {
+   &__title {
+   }
+}
+.popup-feedback {
+   &__content {
+   }
+
+   &__btns {
+   }
+
+   &__btn {
+   }
+
+   &__form {
+   }
+}
+.active {
+}
+.feedback-form {
+   &__box {
+   }
+
+   &__btn {
+   }
+}
+.feedback-form--cal {
+}
+.input-group {
+   &__title {
+   }
+
+   &__box {
+   }
+}
+.input {
+}
+.btn {
+}
+.feedback-form--email {
+}
+.none {
+}
+.textarea {
+}

@@ -1,0 +1,135 @@
+.header {
+   padding: 20px 0;
+   position: sticky;
+   top: -1px;
+   left: 0;
+   background-color: $main-white;
+   z-index: 3;
+
+   &__logo {
+      margin-right: 6rem;
+   }
+
+   &__subnav {
+      margin-right: auto;
+   }
+   &__nav {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+   }
+
+   .nav__item-burger {
+      path {
+         fill: #1c1c1c;
+      }
+   }
+
+   &__profile {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+   }
+
+   &__nav-burger {
+      display: none;
+   }
+
+   .nav__sublist {
+      width: 0;
+      height: 0;
+      opacity: 0;
+      z-index: -999;
+
+      position: absolute;
+      top: -99999%;
+      bottom: 0px;
+      right: 0;
+      left: 0;
+      transform: translateY(100%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 40px;
+
+      padding: 10px;
+      background-color: $ghost-white;
+
+      &.active {
+         top: unset;
+         width: 100%;
+         height: unset;
+         opacity: 1;
+         z-index: 1;
+         transition: opacity 0.3s ease-in;
+      }
+   }
+   .nav__subitem {
+      flex-shrink: 0;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.33;
+      letter-spacing: -0.187px;
+
+      a {
+         text-decoration: underline;
+         text-decoration-color: transparent;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+         a {
+            transition: text-decoration-color 0.2s ease-in;
+            text-decoration-color: $main-blue;
+         }
+      }
+   }
+
+   /* Tablet*/
+   @media (max-width: 1099px) {
+      padding: 15px 0;
+
+      &__logo {
+         margin-right: unset;
+      }
+      &__subnav {
+         display: none;
+      }
+
+      &__btn-log {
+         display: none;
+      }
+
+      &__nav-burger {
+         display: inline-flex;
+      }
+
+      &__nav {
+         justify-content: space-between;
+      }
+   }
+
+   /* Tablet Small*/
+   @media (max-width: 899px) {
+      .container {
+         width: 100%;
+      }
+   }
+
+   /* Mobile */
+   @media (max-width: 599px) {
+      padding: 10px 0;
+      &__logo {
+         margin-left: 46px;
+      }
+   }
+
+   /* Mobile XS */
+   @media (max-width: 389px) {
+      &__logo {
+         margin-left: unset;
+      }
+   }
+}

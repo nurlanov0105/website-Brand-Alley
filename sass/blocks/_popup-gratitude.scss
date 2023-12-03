@@ -1,0 +1,11 @@
+.popup-gratitude {
+   &--extra {
+      &.active {
+         z-index: 12;
+      }
+   }
+}
+.popup__btn--back {
+   max-width: 205px;
+   width: 100%;
+}
